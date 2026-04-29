@@ -201,5 +201,4 @@ Use this process for suspected credential exposure, contract termination, malici
 - Organization-wide 2FA must be enabled.
 - Repository deletion and visibility-change permissions must remain owner-only.
 - Outside collaborator invitations must remain owner-controlled.
-- Secret scanning availability depends on GitHub plan/security feature entitlement.
 - Two-review enforcement should be activated once there are at least two trusted reviewers.

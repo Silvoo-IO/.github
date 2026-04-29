@@ -15,6 +15,7 @@ Configured:
 - repository projects disabled
 - organization projects disabled
 - private repository forking disabled
+- secret scanning and push protection enabled on product repositories
 
 Requires GitHub UI or plan upgrade review:
 
@@ -23,7 +24,6 @@ Requires GitHub UI or plan upgrade review:
 - prevent repository visibility changes by members
 - restrict outside collaborator invitations
 - prevent team creation by members
-- enable secret scanning and push protection
 
 ## Repository Defaults
 
@@ -41,7 +41,8 @@ Configured:
 - CODEOWNERS present in product repositories
 - CI workflow present in product repositories
 - Dependabot config present in product repositories
-- branch protection for `main` should be enabled after all governance file updates are pushed
+- `main` branch protection enabled on product repositories
+- production and `release/*` repository rulesets enabled on product repositories
 
 ## Required Branch Protection Target
 
@@ -59,7 +60,7 @@ When available, protect `main` with:
 - block branch deletion
 - apply rules to administrators
 
-Use one approval while Silvoo has only one trusted maintainer. Move to two approvals for high-risk repositories once a second trusted reviewer is active.
+Current enforcement uses one approval while Silvoo has only one trusted maintainer. Move to two approvals for high-risk repositories once a second trusted reviewer is active.
 
 ## Repository Deletion Risk
 

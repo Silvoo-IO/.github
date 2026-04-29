@@ -19,9 +19,9 @@ Use this checklist when adding repositories, inviting collaborators, or preparin
 - Dependabot enabled.
 - Secret scanning and push protection enabled when the GitHub plan supports it.
 
-## Branch Protection Note
+## Branch Protection Status
 
-GitHub Team supports private repository branch protection. Configure protections after governance file updates are pushed.
+GitHub Team supports private repository branch protection. Product repositories now have `main` protected.
 
 Use one approval while there is only one trusted maintainer. Move backend, payment-control, infrastructure, auth, payment, matching, risk, migration, and CI changes to two approvals once a second trusted reviewer is active.
 
@@ -39,8 +39,7 @@ Use one approval while there is only one trusted maintainer. Move backend, payme
 - `members_can_delete_repositories=true`
 - `members_can_change_repo_visibility=true`
 - `members_can_invite_outside_collaborators=true`
-- branch protection not enabled
-- secret scanning unavailable or disabled
-- CI checks not required for `main`
+- `members_can_create_teams=true`
+- `two_factor_requirement_enabled=false`
 
 These must be reviewed in organization settings and closed as soon as the GitHub plan allows enforcement.
