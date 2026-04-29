@@ -23,8 +23,8 @@ Requires GitHub UI or plan upgrade review:
 - restrict outside collaborator invitations
 - prevent team creation by members
 - enable branch protection for private repositories
+- enable repository rulesets for private repositories
 - enable secret scanning and push protection
-- enable Dependabot alerts and security updates
 
 ## Repository Defaults
 
@@ -37,6 +37,8 @@ Configured:
 - merge commits disabled
 - rebase merge disabled
 - delete branch on merge enabled
+- Dependabot vulnerability alerts enabled
+- Dependabot automated security fixes enabled
 - CODEOWNERS present in product repositories
 - CI workflow present in product repositories
 - Dependabot config present in product repositories
@@ -56,6 +58,8 @@ When available, protect `main` with:
 - block force pushes
 - block branch deletion
 - apply rules to administrators
+
+GitHub also blocked repository rulesets for the private repositories on the current plan, so rulesets cannot be used as a branch-protection substitute until the plan is upgraded or repositories are public.
 
 ## Repository Deletion Risk
 

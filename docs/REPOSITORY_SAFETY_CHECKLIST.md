@@ -25,7 +25,9 @@ GitHub returned a plan-level block for branch protection on private repositories
 
 `Upgrade to GitHub Pro or make this repository public to enable this feature.`
 
-Until GitHub branch protection is available, the organization must treat direct push and force-push prevention as a manual governance gap.
+GitHub returned the same plan-level block for repository rulesets.
+
+Until branch protection or rulesets are available, the organization must treat direct push and force-push prevention as a manual governance gap.
 
 ## Manual Safeguards Until Upgrade
 
@@ -42,8 +44,8 @@ Until GitHub branch protection is available, the organization must treat direct 
 - `members_can_change_repo_visibility=true`
 - `members_can_invite_outside_collaborators=true`
 - branch protection unavailable on private repos
+- repository rulesets unavailable on private repos
 - secret scanning unavailable or disabled
-- dependency security updates disabled
 - CI checks not required for `main`
 
 These must be reviewed in organization settings and closed as soon as the GitHub plan allows enforcement.
