@@ -1,0 +1,36 @@
+name: Security Review
+description: Request review for a security-relevant change or concern. Do not report live vulnerabilities here.
+title: "[Security Review]: "
+labels: ["security", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets, live credentials, customer data, or exploit details. Use SECURITY.md for private vulnerability reports."
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What needs review?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Authentication
+        - Authorization
+        - Payments or financial logic
+        - Secrets or environment configuration
+        - Dependency or supply chain
+        - Logging or PII exposure
+        - Deployment or infrastructure
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk
+      description: What could go wrong?
+    validations:
+      required: true
