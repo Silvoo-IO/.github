@@ -19,15 +19,11 @@ Use this checklist when adding repositories, inviting collaborators, or preparin
 - Dependabot enabled.
 - Secret scanning and push protection enabled when the GitHub plan supports it.
 
-## Current GitHub Plan Limitation
+## Branch Protection Note
 
-GitHub returned a plan-level block for branch protection on private repositories:
+GitHub Team supports private repository branch protection. Configure protections after governance file updates are pushed.
 
-`Upgrade to GitHub Pro or make this repository public to enable this feature.`
-
-GitHub returned the same plan-level block for repository rulesets.
-
-Until branch protection or rulesets are available, the organization must treat direct push and force-push prevention as a manual governance gap.
+Use one approval while there is only one trusted maintainer. Move backend, payment-control, infrastructure, auth, payment, matching, risk, migration, and CI changes to two approvals once a second trusted reviewer is active.
 
 ## Manual Safeguards Until Upgrade
 
@@ -43,8 +39,7 @@ Until branch protection or rulesets are available, the organization must treat d
 - `members_can_delete_repositories=true`
 - `members_can_change_repo_visibility=true`
 - `members_can_invite_outside_collaborators=true`
-- branch protection unavailable on private repos
-- repository rulesets unavailable on private repos
+- branch protection not enabled
 - secret scanning unavailable or disabled
 - CI checks not required for `main`
 
